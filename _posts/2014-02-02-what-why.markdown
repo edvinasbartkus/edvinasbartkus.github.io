@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "What & Why"
+date:   2014-02-03 00:15:00
+categories: meta
+---
+This is not a blog.  
+This is collection of snippets.  
+Code snippets that can help me/you/us to find the right path to make the *it* work.  
