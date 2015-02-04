@@ -8,7 +8,7 @@ Once you play with Docker it comes the time when you need to store docker images
 
 However, there is one very cheap option. It’s S3. Even though S3 is strongly supported by Docker Registry service you can skip the service layer and push/pull container images directly to S3.
 
-For that there is dogestry project: https://github.com/dogestry/dogestry
+For that there is dogestry project: [https://github.com/dogestry/dogestry](https://github.com/dogestry/dogestry)
 
 There were lack of instructions. Therefor, here are my snippets how I made it work.
 
@@ -16,9 +16,11 @@ There were lack of instructions. Therefor, here are my snippets how I made it wo
 2. To install: `./build.sh`. The outcome is that you have built docker named ‘dogestry’. It contains dogestry executable that can push/pull containers to S3.
 3. Run `dogestry` inside `dogestry` container:  
 
+
 ```bash
 sudo docker run --rm -e "AWS_ACCESS_KEY=" -e "AWS_SECRET_KEY=" -v /var/run/docker.sock:/var/run/docker.sock dogestry dogestry push s3:///aws-s3-bucket-name/folder name-of-your-pushed-container
 ```
+
 
 - sudo or no-sudo. It depends on you how you make it work  
 - `run --rm` drop the container that has been built after the task  
